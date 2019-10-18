@@ -63,3 +63,17 @@ $ sudo apt-get install --install-recommends winehq-stable
 ```
 $ apt-get install git
 ```
+
+* Установка 7zip
+
+```
+$ sudo apt update
+$ sudo apt install p7zip-full p7zip-rar
+```
+
+Чтобы разорхивировать архив
+
+```
+$ 7z e <имя_архива>
+$ 7z x <имя_архива>
+```
