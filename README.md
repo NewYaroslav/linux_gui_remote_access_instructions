@@ -58,3 +58,8 @@ $ sudo add-apt-repository "deb https://dl.winehq.org/wine-builds/ubuntu/ artful 
 $ sudo apt-get update
 $ sudo apt-get install --install-recommends winehq-stable
 ```
+* Установка GIT
+
+```
+$ apt-get install git
+```
