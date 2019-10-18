@@ -39,7 +39,6 @@ $ systemctl start xrdp
 * Установка браузера Chrome
 
 ```
-$ sudo apt-get install gosudo apt update
 $ sudo apt-get install gosudo  wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
 $ sudo apt-get install gosudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
 $ sudo apt-get install gosudo apt-get update
