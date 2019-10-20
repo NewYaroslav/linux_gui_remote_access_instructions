@@ -76,12 +76,32 @@ $ sudo apt install openssh-server
 
 * Добавление SSH ключа в Linux
 
+Сначала необходимо запустить *ssh-agent*
+
+```
+$ eval `ssh-agent -s`
+```
+
+Если файлы ключа были получены с другого компьютера, может понадобиться изменить параметры доступа к ним. На примере файла git_rsa:
+
+```
+$ chmod 400 ~/.ssh/git_rsa
+```
+Затем можно добавить ключ в *ssh-agent*
+
+```
+$ ssh-add ~/.ssh/git_rsa
+```
+
+Затем можно добавить файл секретного ключа
+
 Проверка наличия ключа id_rsa.pub
 
 ```
 $ cat ~/.ssh/id_rsa.pub 
 ```
 
+Добавление ключа в authorized_keys
 ```
 $ cat /tmp/id_rsa.john.pub >> ~/.ssh/authorized_keys
 ```
