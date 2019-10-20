@@ -39,11 +39,11 @@ $ systemctl start xrdp
 * Установка браузера Chrome
 
 ```
-$ sudo apt-get install gosudo  wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
-$ sudo apt-get install gosudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
-$ sudo apt-get install gosudo apt-get update
-$ sudo apt-get install gosudo apt-get install google-chrome-stable
-$ sudo apt-get install gogoogle-chrome-stable --no-sandbox
+$ wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add - 
+$ sudo sh -c 'echo "deb https://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
+$ sudo apt-get update
+$ sudo apt-get install google-chrome-stable
+$ sudo gogoogle-chrome-stable --no-sandbox
 ```
 
 По поводу *--no-sandbox*, описано тут [https://github.com/GoogleChrome/puppeteer/issues/3698](https://github.com/GoogleChrome/puppeteer/issues/3698)
