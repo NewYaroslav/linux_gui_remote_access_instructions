@@ -1,6 +1,10 @@
 # linux_gui_remote_access_instructions
 Инструкция по удаленному доступу к Linux GUI (Debian)
 
+### В самом начале
+
+* Как настроить подключение по SSH: https://androidp1.ru/kak-polzovatsja-ssh-a-takzhe-ustanovka-i-nastrojka/
+
 ### Шаг первый. Установка GUI
 
 ```
@@ -62,6 +66,24 @@ $ sudo apt-get install --install-recommends winehq-stable
 
 ```
 $ apt-get install git
+```
+
+* Установка OpenSSH
+
+```
+$ sudo apt install openssh-server
+```
+
+* Добавление SSH ключа в Linux
+
+Проверка наличия ключа id_rsa.pub
+
+```
+$ cat ~/.ssh/id_rsa.pub 
+```
+
+```
+$ cat /tmp/id_rsa.john.pub >> ~/.ssh/authorized_keys
 ```
 
 * Установка 7zip
