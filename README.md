@@ -40,6 +40,41 @@ $ systemctl start xrdp
 
 ## Дополнительно
 
+* Debain: ошибка, **-bash: sudo: command not found** ([ответ](https://unix.stackexchange.com/questions/354928/bash-sudo-command-not-found))
+
+По умолчанию sudo не установлен в Debian, но вы можете установить его. Сначала включите su-mode:
+
+```
+su -
+```
+
+Установите sudo, запустив:
+
+```
+apt-get install sudo -y
+```
+
+После этого вам нужно будет поиграться с пользователями и разрешениями. Дайте право sudo своему собственному пользователю.
+
+```
+usermod -aG sudo yourusername
+```
+
+Убедитесь, что в вашем файле sudoers добавлена группа *sudo*. Выполнить:
+
+```
+visudo
+```
+
+Изменить файл sudoers и добавить в него следующую строку (если он отсутствует):
+
+```
+# Allow members of group sudo to execute any command
+%sudo   ALL=(ALL:ALL) ALL
+```
+
+Чтобы изменения вступили в силу, вам необходимо полностью перезагрузить или перезагрузить устройство.
+
 * Установка браузера Chrome
 
 ```
@@ -62,6 +97,7 @@ $ sudo add-apt-repository "deb https://dl.winehq.org/wine-builds/ubuntu/ artful 
 $ sudo apt-get update
 $ sudo apt-get install --install-recommends winehq-stable
 ```
+
 * Установка GIT
 
 ```
